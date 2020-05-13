@@ -15,4 +15,11 @@ class Potluck
       dish.category == category
     end
   end
+
+  def menu
+    # menu = Hash.new
+    # @dishes.map do |dish|
+    #   menu[dish.category] =
+    # end
+  end
 end
