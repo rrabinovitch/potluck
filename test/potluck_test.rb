@@ -59,12 +59,12 @@ class PotluckTest < Minitest::Test
   end
 
   def test_it_can_list_menu
-    require "pry"; binding.pry
     menu = {
       :appetizers=>["Bean Dip", "Couscous Salad", "Summer Pizza"],
       :entres=>["Cocktail Meatballs", "Roast Pork"],
       :desserts=>["Candy Salad"]
     }
+    
     assert_equal menu, @fuller_potluck.menu
   end
 

@@ -17,9 +17,43 @@ class Potluck
   end
 
   def menu
-    # menu = Hash.new
-    # @dishes.map do |dish|
-    #   menu[dish.category] =
-    # end
+    menu = {appetizers: [],
+    entres: [],
+    desserts: []}
+
+    @dishes.map do |dish|
+      if dish.category == :appetizer
+        menu[:appetizers] << dish.name
+      elsif dish.category == :entre
+        menu[:entres] << dish.name
+      elsif dish.category == :dessert
+        menu[:desserts] << dish.name
+      end
+    end
+
+    menu
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+    #
+    # @dishes.map do |dish|
+    #   if dish.category == :appetizer
+    #     menu[:appetizers] << dish.name
+    #   elsif dish.category == :entre
+    #     menu[:entres] << dish.name
+    #   elsif dish.category == [:dessert]
+    #     menu[:desserts] << dish.name
+    #   end
+    # end
+    #
+    # p menu
